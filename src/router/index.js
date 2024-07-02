@@ -9,7 +9,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: index,
+      redirect: '/index'
+    },
+    {
+      path: '/index',
+      component: index
+    },
+    {
       path:'/login', 
       component: login
     }

@@ -63,7 +63,7 @@ service.interceptors.response.use(
 
 // 成功
     Message({
-      message: response.data || "success",
+      message: "success",
       type: "success",
       duration: 3 * 1000,
     });
