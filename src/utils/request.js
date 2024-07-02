@@ -51,14 +51,13 @@ service.interceptors.response.use(
 
     // if the custom code is not 20000, it is judged as an error.
     if (response.status !== 200) {
-      console.log(response.status);
-      // elemet ui mssage插件
-      Message({
-        message: res.message || "Error",
-        type: "error",
-        duration: 3 * 1000,
-      }),
-        alert(res.message || "Error,服务器响应失败");
+      // console.log(response.status);
+      // // elemet ui mssage插件
+      // Message({
+      //   message: res.message || "Error",
+      //   type: "error",
+      //   duration: 3 * 1000,
+      // })
     }
 
 
@@ -69,18 +68,18 @@ service.interceptors.response.use(
       duration: 3 * 1000,
     });
     return res;
-  }
+  },
   // 400 前端  // 500 服务器
   // status 不是200  403 404 405
-  // error => {
-  //   console.log('err' + error) // for debug
-  //   Message({
-  //     message: error.message,
-  //     type: 'error',
-  //     duration: 5 * 1000
-  //   })
-  //   return Promise.reject(error)
-  // }
+  error => {
+    console.log('err' + error) // for debug
+    Message({
+      message: error.message,
+      type: 'error',
+      duration: 5 * 1000
+    })
+    return Promise.reject(error)
+  }
 );
 
 export default service;
