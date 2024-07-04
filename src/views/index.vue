@@ -1,11 +1,11 @@
 <template>
   <div class="index">
+
     <el-container>
-  <el-header>
+    <el-header>
+
     <div class="logo">
       <img src="../assets/logo.png" alt="我是logo" class="src" height="60px"/>
-      
-
     </div>
 
     <div class="user">
@@ -15,20 +15,39 @@
       </div>
     </div>
 
-  </el-header>
-  <el-container>
+   </el-header>
+   <el-container>
     <el-aside width="200px">Aside</el-aside>
     <el-main>   Main    </el-main>
-  </el-container>
-</el-container>
+   </el-container>
+   </el-container>
 
   </div>
 </template>
 
 <script>
 
+import service from '../utils/request'
+import store from '../store'
 
 export default ({
+// beforeRouteEnter (to, from, next) {
+//   // ...
+//   if (store.getters.getUserInfo.id) {
+//     return next()
+//   }
+//   // next('/login')
+// },
+methods: {
+    logout () {
+      // 1 vuex 清空
+      this.$store.dispatch('asyncUpdateUserInfo', {})
+      // 路由到login
+      this.$router.push('/login')
+    }
+
+  },
+
   name: 'Index',
   data() {
     return {
@@ -43,6 +62,11 @@ export default ({
 
 
 <style scoped>
+
+  .index {
+    height: 100%;
+  }
+
   .el-header {
     background-color: #B3C0D1;
     color: #333;
@@ -80,4 +104,5 @@ export default ({
   body > .el-container {
     margin-bottom: 40px;
   }
+  
 </style>

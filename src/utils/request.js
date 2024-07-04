@@ -46,7 +46,8 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   // 正常会来  status200
   (response) => {
-    console.log(response); 
+    console.log(response.data); 
+    console.log("response,请求成功"); 
     const res = response.data;
 
     // if the custom code is not 20000, it is judged as an error.
@@ -63,11 +64,11 @@ service.interceptors.response.use(
 
 // 成功
     Message({
-      message: "success",
+      message: response.data || "success",
       type: "success",
       duration: 3 * 1000,
     });
-    return res;
+    return response;
   },
   // 400 前端  // 500 服务器
   // status 不是200  403 404 405
