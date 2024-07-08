@@ -43,10 +43,10 @@ methods: {
             url: '/login',
             params: this.user
         }).then(res => {
-            console.log(res);
-            if (res.status === 200) {
-                console.log('登录成功');
-                // this.$store.commit('updateUserInfo', res.data)
+          console.log('登录接口返回');
+            // console.log(res);
+            if (res.code === '200') {
+                this.$store.commit('updateUserInfo', res.data)
                 
                 this.$router.push('/index')
     }})

@@ -38,6 +38,15 @@ export default ({
 //   }
 //   // next('/login')
 // },
+created () {
+  service({
+    method:'get',
+    url:'/infoCheck',
+    params: {
+      "token": store.getters.getToken
+    }
+  })
+},
 methods: {
     logout () {
       // 1 vuex 清空
