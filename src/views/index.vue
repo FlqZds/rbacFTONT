@@ -17,7 +17,42 @@
 
    </el-header>
    <el-container>
-    <el-aside width="200px">Aside</el-aside>
+    <el-aside width="200px">
+
+      <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
+    <el-menu :default-openeds="['1', '3']">
+      <el-submenu index="1">
+        <template slot="title"><i class="el-icon-message"></i>资源管理</template>
+
+          <el-menu-item index="1-1">资源列表</el-menu-item>
+          <el-menu-item index="1-2">资源添加</el-menu-item>
+          <el-menu-item index="1-3">资源审核</el-menu-item>
+
+      </el-submenu>
+
+      <el-submenu index="2">
+        
+        <template slot="title"><i class="el-icon-menu"></i>用户管理</template>
+    
+          <el-menu-item index="2-1">信息编辑</el-menu-item>
+          <el-menu-item index="2-2">用户列表</el-menu-item>
+          <el-menu-item index="2-3">用户日志</el-menu-item>
+
+      </el-submenu>
+
+      <el-submenu index="3">
+        
+        <template slot="title"><i class="el-icon-setting"></i>其他设置</template>
+          <el-menu-item index="3-1">主题美化</el-menu-item>
+          <el-menu-item index="3-2">AI集成</el-menu-item>
+          <el-menu-item index="3-3">小·工具</el-menu-item>
+        
+      </el-submenu>
+    </el-menu>
+  </el-aside>
+
+    </el-aside>
+
     <el-main>   Main    </el-main>
    </el-container>
    </el-container>

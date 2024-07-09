@@ -7,8 +7,8 @@ Vue.use(Vuex)
 // 保存全局的会话数据（session）
 const state = {
   nowList: [],
-  soonList:[],
-  userInfo:{} // 当前登录用户的信息
+  soonList: [],
+  userInfo: {} // 当前登录用户的信息
 }
 
 // 实时监听 state 值的最新状态，注意这里的 getters 可以理解为计算属性
