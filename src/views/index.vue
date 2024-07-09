@@ -11,7 +11,7 @@
     <div class="user">
       <div class="demo-basic--circle">
       <el-avatar shape="square" :size="50" :src="squareUrl"></el-avatar>
-        <el-link type="primary" >注销</el-link><!-- @click="logout" -->
+        <el-link type="primary" @click="logout">注销</el-link>
       </div>
     </div>
 

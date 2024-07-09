@@ -43,8 +43,6 @@ methods: {
             url: '/login',
             params: this.user
         }).then(res => {
-          console.log('登录接口返回');
-            // console.log(res);
             if (res.code === '200') {
                 this.$store.commit('updateUserInfo', res.data)
                 
