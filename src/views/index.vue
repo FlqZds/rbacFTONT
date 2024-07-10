@@ -24,7 +24,7 @@
 
       <el-submenu :index=index v-for="(item, index) in menu" :key="index">
         <template slot="title"><i class="el-icon-message"></i>{{ item.righttext }}</template>
-          <el-menu-item v-for="(c_Item, c_Index) in item.children" :key="c_Index">{{ c_Item.righttext }}</el-menu-item>
+          <el-menu-item v-for="(c_Item, c_Index) in item.children" :key="c_Index" @click="to(c_Item.righturl)">{{ c_Item.righttext }}</el-menu-item>
       </el-submenu>
 
     </el-menu>
@@ -32,7 +32,7 @@
 
     </el-aside>
 
-    <el-main>   Main    </el-main>
+    <el-main>   <router-view></router-view>    </el-main>
    </el-container>
    </el-container>
 
@@ -86,7 +86,12 @@ methods: {
       this.menu = res.data
 
     }})
+  },
+// 该路由跳哪去
+  to(url){
+    this.$router.push(url)
   }
+
 
 
   },
