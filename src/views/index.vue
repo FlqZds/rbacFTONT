@@ -45,13 +45,13 @@ import service from '../utils/request'
 import store from '../store'
 
 export default ({
-// beforeRouteEnter (to, from, next) {
-//   // ...
-//   if (store.getters.getUserInfo.id) {
-//     return next()
-//   }
-//   // next('/login')
-// },
+beforeRouteEnter (to, from, next) {
+  // ...
+  if (!store.getters.getUserInfo.id) {
+    return next()
+  }
+  next('/login')
+},
 created () {
   service({
     method:'get',
