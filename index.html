@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>rbacfront</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>rbacfront</title>
+
+  <script>
+
+    function init(status1, status2) {
+      document.getElementByIdx("showContent").style.display = status1;
+      document.getElementByIdx("showLoad").style.display = status2;
+    }
+
+    function disapperAnimation(){
+     
+    }
+
+  </script>
+
+</head>
+
+<!-- @.onload=init() @.onloaddata=disapperAnimation() -->
+<body>
+  <!-- <div id="showLoad" style="z-index:2; display:block; width:auto; height:auto;">
+    <h1>页面加载中......</h1>
+  </div>
+  <div id="app" id="showContent" style="z-index:1; "></div> -->
+  <!-- built files will be auto injected -->
+   <div id="app"></div>
+</body>
+
 </html>

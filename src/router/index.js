@@ -4,6 +4,7 @@ import index  from '../views/index'
 import login  from '../views/login'
 import sourceList  from '../views/index/sourceList.vue'
 import userLog  from '../views/index/userLog.vue'
+import userEdit  from '../views/index/userEdit.vue'
 import toolKits  from '../views/index/toolKits.vue'
 
 Vue.use(Router)
@@ -51,9 +52,9 @@ export default new Router({
         },
         // 用户管理
         {
-          path: '/user/logger',
-          name: '',
-          component:userLog
+          path: '/users/edit', 
+          name: 'userEdit',
+          component:userEdit
         },
         {
           path: '/user/logger',

@@ -8,12 +8,12 @@
 import service from './utils/request'
 export default {
   name: 'App',
-  created() {
-    service({
-      method:'get',
-      url:'/test001'
-    })
-  }, 
+  // created() {
+  //   service({
+  //     method:'get',
+  //     url:'/test001'
+  //   })
+  // }, 
 }
 </script>
 

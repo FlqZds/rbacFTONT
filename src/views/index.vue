@@ -53,13 +53,13 @@ beforeRouteEnter (to, from, next) {
   next('/login')
 },
 created () {
-  service({
-    method:'get',
-    url:'/infoCheck',
-    params: {
-      "token": store.getters.getToken
-    }
-  })
+  // service({
+  //   method:'get',
+  //   url:'/infoCheck',
+  //   params: {
+  //     "token": store.getters.getToken
+  //   }
+  // })
 
   // 获取菜单列表
   this.initMenu()
